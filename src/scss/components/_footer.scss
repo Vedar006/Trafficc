@@ -1,0 +1,111 @@
+.footer {
+  min-height: 350px;
+  padding-bottom: 30px;
+
+  &__container {
+    padding-top: 40px;
+  }
+
+  &__accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+
+    &-item {
+      cursor: pointer;
+
+
+      &:active {
+        border: 1px solid red;
+      }
+
+      svg {
+        width: 10px;
+        height: 16px;
+        fill: var(--blue-color);
+
+
+      }
+
+
+
+    }
+
+    &-text {
+      display: none;
+     
+
+
+    }
+
+    &-title {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+
+    &-item {
+      svg {
+        width: 20px;
+        height: 15px;
+        fill: var(--blue-color);
+      }
+
+      a {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+    }
+  }
+
+  &__columns {
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: flex-start;
+    // flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include mobile {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+
+
+    }
+
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 200px;
+    height: 100%;
+
+
+  }
+}
+
+.footer__accordion-item.active {
+  margin-bottom: 50px;
+
+  .footer__accordion-text {
+    display: block;
+
+  }
+
+  svg {
+    transform: rotate(90deg);
+  }
+}

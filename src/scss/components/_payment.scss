@@ -1,0 +1,46 @@
+.payment {
+  min-height: 400px;
+  padding-top: 80px;
+
+  @include mobile {
+    padding-bottom: 40px;
+  }
+  &__title {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: var(--black-color);
+
+    span {
+      color: var(--blue-color);
+    }
+
+  }
+
+  &__subtitle {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #939393;
+  }
+
+  &__items {
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+}

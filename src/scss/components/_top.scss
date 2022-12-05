@@ -1,0 +1,64 @@
+.top {
+  min-height: 540px;
+  background-image: url("../img/top/top_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-bottom: 50px;
+
+  &__container {
+    padding-top: 80px;
+  }
+
+  &__title {
+    color: var(--light-color);
+  }
+
+  &__subtitle {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 80px;
+    @include mobile {
+      grid-template-columns: repeat(1,1fr);
+    }
+
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    span {
+      display: flex;
+      align-items: center;
+      color: var(--light-color);
+      font-size: 70px;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+
+    &-descr {
+      font-family: 'Gilroy';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+
+      color: var(--light-color);
+    }
+  }
+}

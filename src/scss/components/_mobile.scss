@@ -1,0 +1,262 @@
+.mobile {
+  min-height: 990px;
+  background-image: url("../img/mobile/mobile_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &--two {
+    background-image: url("../img/mobile/mobile_bg2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @include mobile {
+    min-height: 900px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+
+  }
+
+  &__text {
+    margin-top: 270px;
+    text-align: center;
+
+    @include mobile {
+      margin-top: 40px;
+    }
+
+    &--two {
+      margin-top: 150px;
+
+      @include mobile {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 40px;
+    color: var(--light-color);
+
+    @include mobile {
+      font-size: 32px;
+    }
+
+    &--two {
+      line-height: 80px;
+
+      @include mobile {
+        font-size: 32px;
+        line-height: 40px;
+      }
+    }
+
+  }
+
+
+
+  &__info {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+
+
+
+
+
+
+    }
+
+    // display: flex;
+    // flex-wrap: wrap;
+    // gap: 30px;
+    // align-items: center;
+    // // justify-content: start;
+    // @include mobile {
+    //   gap: 0;
+    // }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--light-color);
+      font-size: 40px;
+      font-weight: 700;
+      position: relative;
+      // margin-right: 5px;
+
+      padding: 40px;
+
+
+      @include mobile {
+        font-size: 30px;
+        line-height: 30px;
+        text-align: center;
+        padding: 10px 20px;
+
+      }
+
+      &:not(:last-child)::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: -20px;
+
+        width: 2px;
+        height: 190px;
+        background-color: rgba(255, 255, 255, 0.25);
+
+        @include mobile {
+          display: none;
+        }
+      }
+
+
+
+      span {
+        font-size: 16px;
+        font-weight: 500;
+
+        @include mobile {
+          font-size: 13px;
+          line-height: 15px;
+        }
+      }
+    }
+
+  }
+
+  &__choice {
+    width: 1110px;
+    min-height: 305px;
+    background-color: var(--light-color);
+    margin-top: 25px;
+    box-shadow: 0px 20px 80px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    padding-bottom: 20px;
+
+    @include mobile {
+      max-width: 430px;
+      width: 100%;
+      min-width: 290px;
+    }
+
+    &-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+
+      @include mobile {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    &-text {
+      max-width: 430px;
+      font-family: 'Gilroy';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      /* or 150% */
+
+      text-align: center;
+
+      color: #000000;
+
+      @include mobile {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+
+    &-column {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding-top: 60px;
+
+      @include mobile {
+        padding-top: 20px;
+      }
+
+      &:first-child::before {
+        content: "";
+        position: absolute;
+        right: -10px;
+
+        top: 20px;
+        width: 2px;
+        height: 100%;
+        background-color: #F3F3F3;
+
+        @include mobile {
+          display: none;
+        }
+      }
+
+    }
+
+
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    background-color: var(--blue-color);
+    color: var(--light-color);
+    box-shadow: 0px 15px 20px rgba(85, 181, 112, 0.35);
+
+    &:hover {
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.35);
+    }
+
+
+
+    svg {
+      fill: var(--light-color);
+      width: 20px;
+      height: 20px;
+      transform: rotate(90deg);
+    }
+
+    &--green {
+      background-color: var(--green-color);
+      color: var(--light-color);
+
+      svg {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+.mobile__btn--page_two {
+  svg {
+    transform: rotate(0deg);
+  }
+}
+.mobile__btn--rotate {
+  svg {
+    transform: rotate(90deg);
+  }
+}

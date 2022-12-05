@@ -1,0 +1,37 @@
+.mail {
+  &__title {
+    font-size: 20px;
+    font-weight: 900;
+  }
+
+  &__container {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    span {
+      font-family: 'Gilroy';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 30px;
+      line-height: 24px;
+      /* identical to box height, or 80% */
+
+      text-align: center;
+      text-transform: uppercase;
+
+      color: #939393;
+
+      a {
+        color: #2E9ADB;
+
+        &:hover {
+          color: #0079c4;
+        }
+      }
+    }
+  }
+}
