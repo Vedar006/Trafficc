@@ -2,6 +2,12 @@
   &__title {
     font-size: 20px;
     font-weight: 900;
+
+    @include mobile {
+      font-weight: 900;
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &__container {
@@ -17,7 +23,7 @@
       font-style: normal;
       font-weight: 900;
       font-size: 30px;
-      line-height: 24px;
+      line-height: 29px;
       /* identical to box height, or 80% */
 
       text-align: center;
@@ -25,8 +31,13 @@
 
       color: #939393;
 
+      @include mobile {
+        font-size: 24px;
+      }
+
       a {
         color: #2E9ADB;
+        line-height: 34px;
 
         &:hover {
           color: #0079c4;

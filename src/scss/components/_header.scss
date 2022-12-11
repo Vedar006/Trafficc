@@ -53,7 +53,7 @@
 
     @include mobile {
       margin-top: 15px;
-      padding: 0 25px;
+      padding: 0;
       width: 100%;
       order: 3;
       // gap: 110px;
@@ -234,30 +234,31 @@
 .header__item--page_two {
 
 
+  &::before {
+    content: "";
+    opacity: 0;
+    position: absolute;
+    top: -25px;
+    width: 100%;
+    height: 5px;
+    background-color: var(--green-color);
+    transition: .4s linear;
+
+    @include mobile {
+      top: -10px;
+      height: 3px;
+    }
+  }
+
+  &:hover {
     &::before {
-      content: "";
-      opacity: 0;
-      position: absolute;
-      top: -25px;
-      width: 100%;
-      height: 5px;
-      background-color: var(--green-color);
-      transition: .4s linear;
-
-      @include mobile {
-        top: -10px;
-        height: 3px;
-      }
+      opacity: 1;
     }
-
-    &:hover {
-      &::before {
-        opacity: 1;
-      }
-    }
+  }
 
 
 }
+
 .header__langswitch--page_two {
   position: relative;
   width: 65px;

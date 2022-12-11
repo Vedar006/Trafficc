@@ -181,4 +181,8 @@ text-align: center;
 text-transform: uppercase;
 
 color: var(--black-color);
+@include mobile {
+  font-size: 16px;
+line-height: 19px;
+}
 }

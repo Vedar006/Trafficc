@@ -150,7 +150,7 @@
     padding-bottom: 20px;
 
     @include mobile {
-      max-width: 430px;
+      max-width: 380px;
       width: 100%;
       min-width: 290px;
     }
@@ -250,11 +250,13 @@
     }
   }
 }
+
 .mobile__btn--page_two {
   svg {
     transform: rotate(0deg);
   }
 }
+
 .mobile__btn--rotate {
   svg {
     transform: rotate(90deg);

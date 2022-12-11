@@ -1,10 +1,14 @@
 @import '../mixins';
 
 .promotion {
+  @include mobile {
+    width: 100%;
+  }
 
 
 
   &__container {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,6 +29,10 @@
     border-radius: 8px;
     padding-bottom: 30px;
 
+    @include mobile {
+      width: 450px;
+    }
+
     &-top {
       position: relative;
       min-height: 396px;
@@ -36,6 +44,10 @@
       gap: 20px;
       width: 100%;
 
+      @include mobile {
+        padding-top: 30px;
+      }
+
       &::before {
         content: "";
         position: absolute;
@@ -45,6 +57,11 @@
         width: 100%;
         height: 1px;
         background-color: #D2D2D2;
+
+        @include mobile {
+          max-width: 450px;
+          top: 93%;
+        }
       }
 
     }
@@ -58,6 +75,10 @@
       flex-direction: column;
       align-items: center;
       transition: max-height 2s linear;
+
+      @include mobile {
+        // gap: 400px  ;
+      }
     }
 
 
@@ -76,6 +97,10 @@
 
       color: var(--blue-color);
 
+      @include mobile {
+        font-size: 43px;
+      }
+
     }
 
     &-descr {
@@ -89,6 +114,11 @@
 
       color: #939393;
       width: 724px;
+
+      @include mobile {
+        font-size: 19px;
+        max-width: 350px;
+      }
     }
 
     &-btn {
@@ -123,6 +153,7 @@
 
   &__adc {
     min-height: 522px;
+    margin-bottom: 30px;
 
 
     &-item {
@@ -140,6 +171,11 @@
       img {
         object-fit: contain;
       }
+
+      @include mobile {
+        width: 150px;
+        height: 150px;
+      }
     }
 
     &-items {
@@ -150,6 +186,10 @@
       flex-wrap: wrap;
       padding-bottom: 35px;
       border-bottom: 1px dashed #D2D2D2;
+
+      @include mobile {
+        gap: 20px;
+      }
 
     }
   }
@@ -174,6 +214,10 @@
       flex-direction: column;
       align-items: center;
       gap: 60px;
+
+      @include mobile {
+        gap: 30px;
+      }
     }
 
     &-items {
@@ -181,6 +225,10 @@
       background: #FFFFFF;
       box-shadow: 0px 20px 80px rgba(0, 0, 0, 0.08);
       border-radius: 8px;
+
+      @include mobile {
+        flex-direction: column;
+      }
 
     }
 
@@ -195,7 +243,14 @@
 
       &:not(:last-child) {
         border-right: 1px solid #EBEBEB;
-        ;
+
+        @include mobile {
+          gap: 14px;
+          width: 330px;
+          height: 100px;
+          border-right: none;
+          border-bottom: 1px solid #EBEBEB;
+        }
       }
 
     }
@@ -214,6 +269,10 @@
       text-align: center;
 
       color: #939393;
+
+      @include mobile {
+        font-size: 14px;
+      }
     }
 
     &-subtitle {
@@ -228,6 +287,11 @@
 
       color: var(--black-color);
 
+      @include mobile {
+        font-size: 19px;
+        line-height: 19px;
+      }
+
       &--blue {
 
         font-family: 'Gilroy';
@@ -238,6 +302,11 @@
         text-align: center;
 
         color: #2E9ADB;
+
+        @include mobile {
+          font-size: 19px;
+          line-height: 19px;
+        }
       }
     }
   }
@@ -269,6 +338,10 @@
 
         color: var(--black-color);
 
+        @include mobile {
+          font-size: 18px;
+        }
+
       }
     }
   }
@@ -280,6 +353,7 @@
       display: flex;
       gap: 30px;
       flex-wrap: wrap;
+      justify-content: center;
       border-bottom: 1px dashed #D2D2D2;
       padding-bottom: 60px;
 
@@ -293,6 +367,16 @@
       border-radius: 8px;
       display: flex;
 
+
+      @include mobile {
+        width: 400px;
+        height: 299px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+      }
+
+
       &-img {
         width: 35%;
         display: flex;
@@ -301,6 +385,14 @@
         justify-content: center;
         gap: 25px;
         border-right: 1px solid #EBEBEB;
+
+        @include mobile {
+          width: 100%;
+          border-right: none;
+          border-bottom: 1px solid #EBEBEB;
+          padding-bottom: 35px;
+
+        }
 
         span {
           font-family: 'Gilroy';
@@ -311,6 +403,8 @@
           text-align: center;
 
           color: #939393;
+
+
         }
       }
 
@@ -332,6 +426,12 @@
 
         color: var(--black-color);
 
+        @include mobile {
+          width: 100%;
+          font-weight: 500;
+
+        }
+
         span {
           font-family: 'Gilroy';
           font-style: normal;
@@ -342,6 +442,12 @@
 
 
           color: #939393;
+
+          @include mobile {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 15px;
+          }
         }
 
       }
@@ -356,6 +462,12 @@
     border-bottom: 1px dashed #D2D2D2;
     padding-bottom: 20px;
 
+    &--title {
+      font-weight: 700;
+      font-size: 19px;
+      line-height: 19px;
+    }
+
     &-subtitle {
       font-family: 'Gilroy';
       font-style: normal;
@@ -367,6 +479,10 @@
       text-align: center;
 
       color: #939393;
+
+      @include mobile {
+        padding: 0 30px;
+      }
     }
 
     &-text {
@@ -378,6 +494,11 @@
       text-align: center;
 
       color: #060606;
+
+      @include mobile {
+        // max-width: 250px;
+        padding: 0 50px;
+      }
     }
   }
 
@@ -388,6 +509,7 @@
     align-items: center;
 
     &-text {
+
       margin-top: 40px;
       font-family: 'Gilroy';
       font-style: normal;
@@ -399,6 +521,7 @@
       text-align: center;
 
       color: #939393;
+
 
     }
 
@@ -454,10 +577,16 @@
   &__app {
     padding-bottom: 50px;
     border-bottom: 1px dashed #D2D2D2;
+
+    @include mobile {
+      width: 100%;
+    }
+
     &-items {
       display: flex;
       gap: 30px;
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     &-item {
@@ -473,6 +602,11 @@
       background: var(--light-color);
       box-shadow: 0px 20px 80px rgba(0, 0, 0, 0.08);
       border-radius: 8px;
+
+      @include mobile {
+        width: 356px;
+        height: 320px;
+      }
 
       p {
         font-family: 'Gilroy';
@@ -490,22 +624,46 @@
       font-weight: 700;
       font-size: 20px;
       line-height: 24px;
+
+      @include mobile {
+        padding: 0 15px;
+        font-size: 16px;
+        line-height: 19px;
+      }
     }
   }
+
   &__successes {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 30px;
+
+    &-title {
+      @include mobile {
+        font-weight: 700;
+        font-size: 19px;
+        line-height: 19px;
+      }
+
+    }
+
+    @include mobile {
+      gap: 0px;
+    }
+
     p {
+      width: 100%;
+      padding: 0 30px;
 
       font-family: 'Gilroy';
-font-style: normal;
-font-weight: 400;
-font-size: 21px;
-line-height: 28px;
-text-align: center;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 21px;
+      line-height: 28px;
+      text-align: center;
 
-color: #000000;
+      color: #000000;
 
     }
   }
@@ -516,6 +674,9 @@ color: #000000;
   max-height: 3000px;
   transition: max-height 2s linear;
 
+  @include mobile {
+    max-height: 5800px;
+  }
 
 }
 

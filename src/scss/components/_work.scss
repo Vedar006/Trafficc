@@ -25,6 +25,17 @@
     grid-template-rows: repeat(2, 1fr);
     padding-top: 88px;
 
+
+
+    @include mobile {
+      max-width: 380px;
+      grid-template-columns: repeat(2, 1fr);
+      // grid-template-rows: repeat(3,1fr);
+      grid-column-gap: 34px;
+      grid-row-gap: 40px;
+      align-items: flex-start;
+    }
+
     &--page_two {
       // padding: 88px 50px 0 50px;
       display: flex;
@@ -33,15 +44,11 @@
       align-items: center;
       gap: 60px;
 
-      
-    }
+      @include mobile {
+        gap: 30px;
+align-items: center;
 
-    @include mobile {
-      grid-template-columns: repeat(2, 1fr);
-      // grid-template-rows: repeat(3,1fr);
-      grid-column-gap: 34px;
-      grid-row-gap: 40px;
-      align-items: flex-start;
+      }
     }
   }
 
@@ -51,6 +58,11 @@
     align-items: center;
     max-width: 230px;
     text-align: center;
+    @include mobile {
+      max-width: 180px;
+    }
+
+
 
     svg {
       width: 53px;
@@ -68,6 +80,20 @@
 
       color: #000000;
 
+    }
+
+    &--two {
+      @include mobile {
+        svg {
+          width: 50px;
+          height: 50px;
+          fill: var(--blue-color);
+        }
+        span {
+          font-size: 17px;
+          line-height: 20px;
+        }
+      }
     }
   }
 

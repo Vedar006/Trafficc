@@ -4,13 +4,18 @@
 
 
     <a href="#" class="header__logo">
-      <img src="img/logo.png" alt="logo">
+      <picture>
+        <source type="image/avif" srcset="img/logo.avif">
+        <source type="image/webp" srcset="img/logo.webp">
+        <img src="img/logo.png" alt="">
+      </picture>
+
     </a>
     <ul class="list-reset header__items header__items--page_two">
-      <li class="header__item header__item--page_two"><a href="#">вебмастерам</a></li>
-      <li class="header__item header__item--page_two"><a href="#">рекламодателям</a></li>
+      <li class="header__item header__item--page_two"><a href="index.html">вебмастерам</a></li>
+      <li class="header__item header__item--page_two"><a href="page-2.html">рекламодателям</a></li>
     </ul>
-    <a href="#" class="header__btn">вход <span>|</span> <span>регистрация</span></a>
+    <a href="authorization.html" class="header__btn">вход <span>|</span> <span>регистрация</span></a>
 
     <label class="header__langswitch--page_two">
 

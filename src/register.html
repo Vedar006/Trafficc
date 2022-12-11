@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+
+      <section class="register">
+
+        <div class="container register__container">
+          <h4 class="section__title register__title">
+            Регистрация
+          </h4>
+          <form action="/" class="register__form">
+            <div class="register__form-rows">
+              <div class="register__form-row">
+                <label class="register__form-input">
+
+                  <input type="email" class="input-reset register__form-input--email" placeholder="E-mail">
+                </label>
+              </div>
+
+              <div class="register__form-row">
+                <label class="register__form-input">
+
+                  <input type="password" class="input-reset register__form-input--pass" placeholder="Пароль">
+                </label>
+                <label class="register__form-input">
+
+                  <input type="password" class="input-reset register__form-input--repass" placeholder="Повторите пароль">
+                </label>
+              </div>
+
+              <div class="register__form-row">
+                <label class="register__form-input">
+
+                  <input type="text" class="input-reset" placeholder="Skype(необязательно)">
+                </label>
+                <label class="register__form-input">
+
+                  <input type="text" class="input-reset" placeholder="Telegram(необязательно)">
+                </label>
+              </div>
+            </div>
+            <div class="register__form-bottom">
+              <h6 class="register__form-subtitle">
+                С чем вы работаете:
+              </h6>
+              <ul class="list-reset register__checkboxes">
+
+                <li class="register__checkbox">
+                  <input class="input-reset" type="checkbox" id="checkbox-1" name="checkbox-1">
+                  <label for="checkbox-1">CPI</label>
+
+                </li>
+                <li class="register__checkbox">
+                  <input class="input-reset" type="checkbox" id="checkbox-2" name="checkbox-2">
+                  <label for="checkbox-2">Gambling</label>
+
+                </li>
+                <li class="register__checkbox">
+                  <input class="input-reset" type="checkbox" id="checkbox-3" name="checkbox-3">
+                  <label for="checkbox-3">Betting</label>
+
+                </li>
+                <li class="register__checkbox">
+                  <input class="input-reset" type="checkbox" id="checkbox-4" name="checkbox-4">
+                  <label for="checkbox-4">Crypto</label>
+
+                </li>
+                <li class="register__checkbox">
+                  <input class="input-reset" type="checkbox" id="checkbox-5" name="checkbox-5">
+                  <label for="checkbox-5">Datinges</label>
+
+                </li>
+                <li class="register__checkbox">
+                  <input class="input-reset" type="checkbox" id="checkbox-6" name="checkbox-6">
+                  <label for="checkbox-6">Sweepstakes</label>
+
+                </li>
+                <li class="register__checkbox">
+                  <input class="input-reset" type="checkbox" id="checkbox-7" name="checkbox-7">
+                  <label for="checkbox-7">CC-submits</label>
+
+                </li>
+                <li class="register__checkbox">
+                  <input class="input-reset" type="checkbox" id="checkbox-8" name="checkbox-8">
+                  <label for="checkbox-8">Other</label>
+
+                </li>
+
+
+              </ul>
+
+              <label class="register__form-traffic">
+
+                <input type="text" class="input-reset" placeholder="Какой трафик вы используете? ">
+              </label>
+
+              <div class="register__form-agree">
+                <input class="input-reset" type="checkbox" id="agree" name="agree">
+                <label for="agree">I agree with terms and conditions</label>
+              </div>
+
+              <button type="submit" class="btn-reset btn register__form-btn">зарегистрироваться</button>
+            </div>
+
+
+
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+.authorization {
+  height: 100vh;
+  background-image: url("../img/mobile/mobile_bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  &__title {
+
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+  }
+
+  &__container {
+    display: flex;
+    padding-top: 70px;
+    justify-content: center;
+
+    @include mobile {
+      padding-top: 10px;
+    }
+
+
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    @include mobile {
+      align-items: start;
+    }
+
+
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    }
+
+    &-remember {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      span {
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 24px;
+        /* identical to box height, or 185% */
+
+
+        color: var(--light-color);
+
+      }
+    }
+
+    &-acc {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      @include mobile {
+        gap: 30px;
+      }
+
+      a {
+        font-family: 'Gilroy';
+
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 24px;
+        /* identical to box height, or 150% */
+
+        text-decoration-line: underline;
+
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  &__input {
+    width: 350px;
+    height: 80px;
+
+
+    background: #FFFFFF;
+    border-radius: 40px;
+
+    input {
+      width: 100%;
+      height: 100%;
+      padding-left: 25px;
+      border-radius: 40px;
+    }
+
+    @include mobile {
+      width: 288px;
+      height: 60px;
+    }
+
+  }
+
+  &__btn {
+    width: 350px;
+    height: 80px;
+
+
+    color: var(--light-color);
+    border: 3px solid var(--light-color);
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    @include mobile {
+      width: 288px;
+      height: 60px;
+    }
+
+    img {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__switch {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background: #F9F9F9;
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+
+    &-input {
+      &:checked[type="checkbox"] {
+        background-color: #40e551;
+      }
+    }
+
+    input[type="checkbox"]::before {
+
+      content: "";
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      border-radius: 20px;
+      top: 0;
+      left: 0;
+
+      border-radius: 14px;
+      transition: .5s;
+      transform: scale(1.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+      font-family: 'Gilroy';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 11px;
+      line-height: 13px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+
+      background: #FFFFFF;
+      box-shadow: 0px 0px 20px rgba(170, 74, 236, 0.25);
+
+      color: var(--light-color);
+
+
+    }
+
+    input:checked[type="checkbox"]::before {
+      content: "";
+      left: 30px;
+      font-family: 'Gilroy';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 11px;
+      line-height: 13px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+
+      color: var(--light-color);
+
+    }
+
+    span {
+      font-family: 'Gilroy';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 11px;
+      line-height: 13px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+
+      color: #919191;
+    }
+  }
+}

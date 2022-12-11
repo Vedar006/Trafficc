@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <section class="authorization">
+        <div class="container authorization__container">
+
+
+          <div class="authorization__form-wrapper">
+            <h3 class="authorization__title">авторизоваться</h3>
+
+            <form action="mail.php" method="post" class="authorization__form">
+              <label class="authorization__input">
+                <input class="input-reset authorization__form-email" type="email" placeholder="E-mail">
+              </label>
+              <label class="authorization__input">
+                <input class="input-reset authorization__form-pass" type="password" placeholder="Пароль">
+              </label>
+
+
+              <button type="submit" class="btn-reset btn authorization__btn">
+
+                <span>Войти</span> <img src="img/authorization//authorization_arrow1.svg" alt="">
+              </button>
+
+
+              <div class="authorization__form-remember">
+                <label class="authorization__switch">
+
+
+
+                  <input name="remeber_me" id="rules_inp" class="input-reset authorization__switch-input"
+                    type="checkbox">
+
+                </label>
+
+                <span>Запомнить меня</span>
+
+
+              </div>
+              <div class="authorization__form-acc">
+                <a href="#">Забыли пароль?</a>
+                <a href="register.html">Создать аккаунт</a>
+              </div>
+
+
+
+
+            </form>
+
+          </div>
+
+
+        </div>
+
+      </section>
+    </main>
+
+
+  </div>
+</body>
+
+</html>
