@@ -38,6 +38,8 @@ const rootFolder = path.basename(path.resolve());
 // paths
 const srcFolder = './src';
 const buildFolder = './app';
+// const buildFolder = 'C:/MAMP/htdocs/app';
+
 
 
 const paths = {

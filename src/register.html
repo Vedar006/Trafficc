@@ -30,18 +30,20 @@
                 </label>
                 <label class="register__form-input">
 
-                  <input type="password" class="input-reset register__form-input--repass" placeholder="Повторите пароль">
+                  <input type="password" class="input-reset register__form-input--repass"
+                    placeholder="Повторите пароль">
                 </label>
               </div>
 
               <div class="register__form-row">
                 <label class="register__form-input">
 
-                  <input type="text" class="input-reset" placeholder="Skype(необязательно)">
+                  <input type="text" class="input-reset register__form-input--skype" placeholder="Skype(необязательно)">
                 </label>
                 <label class="register__form-input">
 
-                  <input type="text" class="input-reset" placeholder="Telegram(необязательно)">
+                  <input type="text" class="input-reset register__form-input--telegram"
+                    placeholder="Telegram(необязательно)">
                 </label>
               </div>
             </div>
@@ -52,42 +54,42 @@
               <ul class="list-reset register__checkboxes">
 
                 <li class="register__checkbox">
-                  <input class="input-reset" type="checkbox" id="checkbox-1" name="checkbox-1">
+                  <input class="input-reset" type="checkbox" value="CPI" id="checkbox-1" name="CPI">
                   <label for="checkbox-1">CPI</label>
 
                 </li>
                 <li class="register__checkbox">
-                  <input class="input-reset" type="checkbox" id="checkbox-2" name="checkbox-2">
+                  <input class="input-reset" type="checkbox" value="Gambling" id="checkbox-2" name="Gambling">
                   <label for="checkbox-2">Gambling</label>
 
                 </li>
                 <li class="register__checkbox">
-                  <input class="input-reset" type="checkbox" id="checkbox-3" name="checkbox-3">
+                  <input class="input-reset" type="checkbox" value="Betting" id="checkbox-3" name="Betting">
                   <label for="checkbox-3">Betting</label>
 
                 </li>
                 <li class="register__checkbox">
-                  <input class="input-reset" type="checkbox" id="checkbox-4" name="checkbox-4">
+                  <input class="input-reset" type="checkbox" value="Crypto" id="checkbox-4" name="Crypto">
                   <label for="checkbox-4">Crypto</label>
 
                 </li>
                 <li class="register__checkbox">
-                  <input class="input-reset" type="checkbox" id="checkbox-5" name="checkbox-5">
+                  <input class="input-reset" type="checkbox" value="Datinges" id="checkbox-5" name="Datinges">
                   <label for="checkbox-5">Datinges</label>
 
                 </li>
                 <li class="register__checkbox">
-                  <input class="input-reset" type="checkbox" id="checkbox-6" name="checkbox-6">
+                  <input class="input-reset" type="checkbox" value="Sweepstakes" id="checkbox-6" name="Sweepstakes">
                   <label for="checkbox-6">Sweepstakes</label>
 
                 </li>
                 <li class="register__checkbox">
-                  <input class="input-reset" type="checkbox" id="checkbox-7" name="checkbox-7">
+                  <input class="input-reset" type="checkbox" value="CC-submits" id="checkbox-7" name="CC-submits">
                   <label for="checkbox-7">CC-submits</label>
 
                 </li>
                 <li class="register__checkbox">
-                  <input class="input-reset" type="checkbox" id="checkbox-8" name="checkbox-8">
+                  <input class="input-reset" type="checkbox" value="Other" id="checkbox-8" name="Other">
                   <label for="checkbox-8">Other</label>
 
                 </li>
@@ -101,7 +103,8 @@
               </label>
 
               <div class="register__form-agree">
-                <input class="input-reset" type="checkbox" id="agree" name="agree">
+                <input class="input-reset register__form-agree--input" value="agree" type="checkbox" id="agree"
+                  name="agree">
                 <label for="agree">I agree with terms and conditions</label>
               </div>
 
@@ -114,9 +117,37 @@
         </div>
       </section>
 
+
+
     </main>
 
+    <!-- <div class="modal-overlay">
 
+      <div class="modal">
+        <p class="modal__text">
+          Ваша заявка на&nbsp;регистрацию успешно принята.
+          Скоро мы&nbsp;свяжемся с&nbsp;вами!
+        </p>
+        <a href="#" class="btn-reset btn"></a>
+      </div>
+    </div> -->
+    <div class="graph-modal">
+      <div class="graph-modal__container" role="dialog" aria-modal="true">
+        <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+        <div class="graph-modal__content">
+          <p>
+            Ваша заявка на&nbsp;регистрацию успешно принята.
+            Скоро мы&nbsp;свяжемся с&nbsp;вами!
+          </p>
+          <a href="index.html" class="btn graph-modal__btn">
+            на главную
+            <svg>
+              <use xlink:href="img/sprite.svg#arrow_btn"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 

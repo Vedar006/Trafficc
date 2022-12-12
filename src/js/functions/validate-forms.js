@@ -54,12 +54,12 @@ export const validateForms = (selector, rules, afterSend) => {
           console.log('Отправлено');
         }
       }
-    }
+    };
 
     xhr.open('POST', 'mail.php', true);
     xhr.send(formData);
 
     ev.target.reset();
-  })
+  });
 
 };
