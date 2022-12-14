@@ -10,6 +10,9 @@ import {
   validateForms
 } from './functions/validate-forms';
 import GraphModal from 'graph-modal';
+import {
+  language
+} from './components/language';
 const modal = new GraphModal();
 const rules1 = [{
     ruleSelector: '.questions__form-name',
@@ -36,8 +39,8 @@ const rules1 = [{
   },
   {
     ruleSelector: '.questions__form-offer',
-    tel: true,
-    telError: 'Введите ваше сообщение',
+    message: true,
+
     rules: [{
       rule: 'required',
       value: true,
@@ -184,31 +187,12 @@ if (registerCheckboxes) {
   });
 }
 // language
-const lang = document.querySelector('.header__langswitch-input');
-const itemOne = document.querySelector('.header__item--one');
-const itemTwo = document.querySelector('.header__item--two');
-const itemThree = document.querySelector('.header__item--three');
-const itemFour = document.querySelector('.header__item--four');
+language();
 
-if (lang) {
-  lang.onclick = function () {
-    if (lang.checked) {
-      itemOne.textContent = 'webmasters';
-      itemTwo.textContent = 'advertisers';
-      itemThree.textContent = 'sign up';
-      itemFour.textContent = 'sign in';
-    } else {
-      itemOne.textContent = 'вебмастерам';
-      itemTwo.textContent = 'рекламодателям';
-      itemThree.textContent = 'регистрация';
-      itemFour.textContent = 'вход';
-    }
-  };
 
-}
 // inputs
 
-const inputs = document.querySelectorAll('.register__form input');
+// const inputs = document.querySelectorAll('.register__form input');
 // regBtn.addEventListener('click', () => {
 
 //   // const inpo = inputs.map(i => i.value);
@@ -225,4 +209,4 @@ const inputs = document.querySelectorAll('.register__form input');
 //     console.log(i.innerText);
 //   });
 // });
-console.log(modal);
+// console.log(modal);
